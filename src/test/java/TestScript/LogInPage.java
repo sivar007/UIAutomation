@@ -17,7 +17,7 @@ public class LogInPage {
 	@BeforeTest
 	public void launchApplication(){
 		
-	System.setProperty("webdriver.chrome.driver","C:\\Users\\sivaravula\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver","lib\\chromedriver.exe");
 	driver = new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.get("https://cftest.hsc.usf.edu/dwdeptassignment");
@@ -42,7 +42,14 @@ public class LogInPage {
 	public void selectDept2() throws InterruptedException {
 		Thread.sleep(4000);
 	login.deptSelection("ANCILLARY SUPPORT");
-
+	}
+	
+	@Test(priority=4,description="Selecting the department")
+	public void selectDept3() throws InterruptedException {
+		Thread.sleep(4000);
+	login.deptSelection("ATHLETIC TRAINING EDUCATION PROGRAM");
+	
+	
 	
 	}
 	
